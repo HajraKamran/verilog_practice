@@ -1,0 +1,36 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x555869fa7110 .scope module, "fa" "fa" 2 2;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "sum"
+    .port_info 4 /OUTPUT 1 "cout"
+o0x7f98faf20018 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7f98faf20048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x555869febf90 .functor XOR 1, o0x7f98faf20018, o0x7f98faf20048, C4<0>, C4<0>;
+L_0x555869fec020 .functor AND 1, o0x7f98faf20018, o0x7f98faf20048, C4<1>, C4<1>;
+o0x7f98faf200d8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x555869fec160 .functor XOR 1, L_0x555869febf90, o0x7f98faf200d8, C4<0>, C4<0>;
+L_0x555869fec220 .functor AND 1, L_0x555869febf90, o0x7f98faf200d8, C4<1>, C4<1>;
+L_0x555869fec310 .functor OR 1, L_0x555869fec020, L_0x555869fec220, C4<0>, C4<0>;
+v0x555869fa7310_0 .net "a", 0 0, o0x7f98faf20018;  0 drivers
+v0x555869feb980_0 .net "b", 0 0, o0x7f98faf20048;  0 drivers
+v0x555869feba40_0 .net "c0", 0 0, L_0x555869fec020;  1 drivers
+v0x555869febae0_0 .net "c1", 0 0, L_0x555869fec220;  1 drivers
+v0x555869febba0_0 .net "cin", 0 0, o0x7f98faf200d8;  0 drivers
+v0x555869febcb0_0 .net "cout", 0 0, L_0x555869fec310;  1 drivers
+v0x555869febd70_0 .net "s0", 0 0, L_0x555869febf90;  1 drivers
+v0x555869febe30_0 .net "sum", 0 0, L_0x555869fec160;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/hajra/verilog_practice/fulladder/fa.v";
