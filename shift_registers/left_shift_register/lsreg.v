@@ -15,4 +15,3 @@ module lsreg (clk,rset,x,out);
     end
 
 endmodule
-.

@@ -35,4 +35,3 @@ $dumpvars(0,rsreg_tb);
 $finish();
 end
 endmodule
-.
