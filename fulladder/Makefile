@@ -8,4 +8,3 @@ fa_vvp: fa_compile
 fa_compile:
 	iverilog -o fa.out -f flist
 clean:
-.

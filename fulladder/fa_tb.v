@@ -34,4 +34,3 @@ module fa_tb();
         $dumpvars(0,fa_tb);
     end
 endmodule
-.
