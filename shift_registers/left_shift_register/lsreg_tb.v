@@ -35,3 +35,4 @@ $dumpvars(0,lsreg_tb);
 $finish();
 end
 endmodule
+.

@@ -15,3 +15,4 @@ module rsreg (clk,rset,x,out);
     end
 
 endmodule
+.
